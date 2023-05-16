@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+
+ <section>
+        <ul>
+            <li class="list " data-filter="abstract">Abstract</li>
+            <li class="list" data-filter="cars">Cars</li>
+            <li class="list" data-filter="nature">Nature</li>
+            <li class="list active" data-filter="all">All</li>
+        </ul>
+        <div class="product">
+            {% for wall in wallpapers %}
+                <div data-item="" class="itemBox">
+                 <img class="img" src="{{wall}}">
+                </div>
+               
+            {% endfor %} 
+            
+
+        </div>
+    </section>
+{% endblock %}
